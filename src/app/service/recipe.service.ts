@@ -1,4 +1,4 @@
-import { Recipe } from '../recipes/recipe.model';
+import { Recipe } from '../shared/recipe.model';
 import { EventEmitter } from '@angular/core';
 
 export class RecipeService {
