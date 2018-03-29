@@ -1,1 +1,1 @@
-# Recipe shoping Website
+# Recipe shop Website
