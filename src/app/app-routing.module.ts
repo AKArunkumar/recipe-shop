@@ -12,11 +12,13 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { DropmenuDirective } from './dropmenu/dropmenu.directive';
 import { ShoppingService } from './service/shopping.service';
 import { RecipeService } from './service/recipe.service';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/recipes', pathMatch: 'full' },
     { path: 'recipes', component: RecipesComponent, children: [
-        { path: ':id', component: RecipeListComponent }
+        { path: '', component: RecipeStartComponent },
+        { path: ':id', component: RecipeDetailComponent }
     ]
      },
     { path: 'shoping-list', component: ShoppingListComponent }
