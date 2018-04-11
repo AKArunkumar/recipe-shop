@@ -17,6 +17,7 @@ import { ShoppingService } from './service/shopping.service';
 import { RecipeService } from './service/recipe.service';
 import { AppRoutingModule } from './app-routing.module';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
     ShoppingListComponent,
     ShoppingEditComponent,
     DropmenuDirective,
-    RecipeStartComponent
+    RecipeStartComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

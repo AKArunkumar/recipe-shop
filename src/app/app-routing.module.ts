@@ -13,6 +13,7 @@ import { DropmenuDirective } from './dropmenu/dropmenu.directive';
 import { ShoppingService } from './service/shopping.service';
 import { RecipeService } from './service/recipe.service';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/recipes', pathMatch: 'full' },
@@ -21,7 +22,9 @@ const appRoutes: Routes = [
         { path: ':id', component: RecipeDetailComponent }
     ]
      },
-    { path: 'shoping-list', component: ShoppingListComponent }
+    { path: 'shoping-list', component: ShoppingListComponent },
+    { path: 'not-found', component: NotFoundComponent },
+    { path: '**', redirectTo: '/not-found'}
 ];
 
 
