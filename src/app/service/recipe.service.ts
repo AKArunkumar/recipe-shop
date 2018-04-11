@@ -3,7 +3,6 @@ import { EventEmitter } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
 
 export class RecipeService {
-    recipeSelected = new EventEmitter<Recipe>();
     private recipes: Recipe[] = [
         new Recipe(
         'A Test Recipe',

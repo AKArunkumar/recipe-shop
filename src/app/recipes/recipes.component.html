@@ -3,13 +3,6 @@
     <app-recipe-list></app-recipe-list>
   </div>
   <div class="col-md-7">
-    <span *ngIf="gotRecipeDetail; else infoText">
-      <app-recipe-detail [recipeDetail]="gotRecipeDetail"></app-recipe-detail>
-    </span>
-    <ng-template #infoText>
-      <p>
-        Please click to get details
-      </p>
-    </ng-template>
+   <router-outlet></router-outlet>
   </div>
 </div>
