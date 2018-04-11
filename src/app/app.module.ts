@@ -18,6 +18,7 @@ import { RecipeService } from './service/recipe.service';
 import { AppRoutingModule } from './app-routing.module';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ShoppingEditComponent,
     DropmenuDirective,
     RecipeStartComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,

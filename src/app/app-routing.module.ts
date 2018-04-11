@@ -14,12 +14,15 @@ import { ShoppingService } from './service/shopping.service';
 import { RecipeService } from './service/recipe.service';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/recipes', pathMatch: 'full' },
     { path: 'recipes', component: RecipesComponent, children: [
         { path: '', component: RecipeStartComponent },
-        { path: ':id', component: RecipeDetailComponent }
+        { path: 'new', component: RecipeEditComponent },
+        { path: ':id', component: RecipeDetailComponent },
+        { path: ':id/edit', component: RecipeEditComponent}
     ]
      },
     { path: 'shoping-list', component: ShoppingListComponent },
