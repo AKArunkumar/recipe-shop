@@ -29,4 +29,13 @@ export class ShoppingService {
     editIngredient(index: number) {
         this.editIngredientEvent.next(index);
     }
+    upadateIngredient(index: number, ingredient: Ingredient) {
+        console.log(ingredient);
+        this.ingredients[index] = ingredient;
+        this.changeIngredientEvent.next(this.ingredients);
+    }
+    deleteIngredient(index: number) {
+        this.ingredients.splice(index, 1);
+        this.changeIngredientEvent.next(this.ingredients);
+    }
 }
