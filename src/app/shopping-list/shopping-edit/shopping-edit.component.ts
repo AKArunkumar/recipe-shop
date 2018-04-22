@@ -40,7 +40,6 @@ export class ShoppingEditComponent implements OnInit {
     f.reset();
   }
   onDelete() {
-    console.log('hi');
     this.shoppingservice.deleteIngredient(this.editIndex);
     this.slform.reset();
     this.editClicked = false;

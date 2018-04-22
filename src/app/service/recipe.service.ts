@@ -1,6 +1,10 @@
+import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs/Subject';
+
 import { Recipe } from '../shared/recipe.model';
 import { Ingredient } from '../shared/ingredient.model';
 
+@Injectable()
 export class RecipeService {
     private recipes: Recipe[] = [
         new Recipe(
