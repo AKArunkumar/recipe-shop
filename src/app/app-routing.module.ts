@@ -15,6 +15,7 @@ import { RecipeService } from './service/recipe.service';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/recipes', pathMatch: 'full' },
@@ -26,6 +27,7 @@ const appRoutes: Routes = [
     ]
      },
     { path: 'shoping-list', component: ShoppingListComponent },
+    { path: 'singup', component: SignupComponent },
     { path: 'not-found', component: NotFoundComponent },
     { path: '**', redirectTo: '/not-found'}
 ];

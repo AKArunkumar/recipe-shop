@@ -20,6 +20,8 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
 import { NotFoundComponent } from './not-found/not-found.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { FirebaseService } from './service/firebase.service';
+import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { FirebaseService } from './service/firebase.service';
     DropmenuDirective,
     RecipeStartComponent,
     NotFoundComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
