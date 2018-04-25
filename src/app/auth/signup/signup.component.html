@@ -1,16 +1,16 @@
 <div class="row">
-  <div class="col-sx-6">
-    <form (onSubmit)="onSingup(f)" #f="ngForm" >
+  <div class="col-xs-6">
+    <form (ngSubmit)="onSingup(f)" #f="ngForm" >
       <div class="form-group">
           <label for="email">email</label>
-          <input type="text" ngModel="email" >
+          <input type="text"  name="email" [(ngModel)]="email" class="form-control" >
       </div>
       <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" ngModel="password">
+        <input type="password"  name="password" [(ngModel)]="password" class="form-control">
       </div>
       <div>
-        <button type="submit" class="btn btn-success"></button>
+        <button type="submit" class="btn btn-success" >Signup</button>
       </div>
     </form>
   </div>
