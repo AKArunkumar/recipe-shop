@@ -28,6 +28,5 @@ export class HeaderComponent  {
   }
   onLogout() {
    this.authservice.clearToken();
-   this.router.navigate(['/recipes']);
   }
 }
