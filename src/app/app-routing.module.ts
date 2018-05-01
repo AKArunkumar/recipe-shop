@@ -25,8 +25,7 @@ const appRoutes: Routes = [
         { path: 'new', component: RecipeEditComponent },
         { path: ':id', component: RecipeDetailComponent },
         { path: ':id/edit', component: RecipeEditComponent}
-    ],
-    pathMatch: 'full' },
+    ] },
     { path: 'shoping-list', component: ShoppingListComponent },
     { path: 'signup', component: SignupComponent },
     { path: 'signin', component: SigninComponent },

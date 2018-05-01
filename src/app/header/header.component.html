@@ -13,14 +13,12 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <div *ngIf="authservice.haveToken() != null else noToken">
-            <li routerLinkActive='active'>
-                <a routerLink='/signup'>Register</a>
-              </li>
-              <li routerLinkActive='active'>
-                <a routerLink='/signin'>Login</a>
-              </li>
-        </div>
+          <li  *ngIf="authservice.haveToken() == null" routerLinkActive='active'>
+              <a  routerLink='/signup'>Register</a>
+            </li>
+            <li  *ngIf="authservice.haveToken() == null else noToken" routerLinkActive='active'>
+              <a routerLink='/signin'>Login</a>
+            </li>
         <ng-template #noToken >
         <li class="dropdown" appDropmenu>
             <a class="dropdown-toggle" role="button">Manage
