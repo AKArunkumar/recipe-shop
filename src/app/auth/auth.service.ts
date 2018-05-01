@@ -29,15 +29,10 @@ export class AuthService  {
   }
  
   haveToken() {
-    // firebase.auth().onAuthStateChanged((user) => {
-    //   if (user) {
-    //     user.getIdToken().then((idToken) => {
-    //       this.USER_TOKEN = idToken;
-    //     });
-    //   }
-    // })  ;
     return this.USER_TOKEN;
   }
 
-
+  clearToken() {
+    this.USER_TOKEN = null;
+  }
 }
