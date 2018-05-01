@@ -13,10 +13,10 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-          <li  *ngIf="authservice.haveToken() == null" routerLinkActive='active'>
+          <li  *ngIf="!authservice.isAuthenticated()" routerLinkActive='active'>
               <a  routerLink='/signup'>Register</a>
             </li>
-            <li  *ngIf="authservice.haveToken() == null else noToken" routerLinkActive='active'>
+            <li  *ngIf="!authservice.isAuthenticated() else noToken" routerLinkActive='active'>
               <a routerLink='/signin'>Login</a>
             </li>
         <ng-template #noToken >

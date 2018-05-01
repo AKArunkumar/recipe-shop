@@ -22,6 +22,7 @@ import { FirebaseService } from './service/firebase.service';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { AuthService } from './auth/auth.service';
+import { AuthGaurdService } from './auth/auth-gaurd.service';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import { AuthService } from './auth/auth.service';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [ShoppingService, RecipeService, FirebaseService, AuthService],
+  providers: [ShoppingService, RecipeService, FirebaseService, AuthService, AuthGaurdService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

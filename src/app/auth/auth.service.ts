@@ -5,7 +5,7 @@ import { Router} from "@angular/router";
 
 @Injectable()
 export class AuthService  {
-  USER_TOKEN = null;  
+  public USER_TOKEN = null;  
   constructor(private router: Router) { }
 
   userSignup(email: string, password: string) {
@@ -35,8 +35,8 @@ export class AuthService  {
             )
   }
  
-  haveToken() {
-    return this.USER_TOKEN;
+  isAuthenticated() {
+    return this.USER_TOKEN != null;
   }
 
   clearToken() {

@@ -13,12 +13,12 @@ export class FirebaseService  {
 
     }
     putRecipes() {
-        let tk = this.authservice.haveToken();   
+        let tk = this.authservice.USER_TOKEN;   
         return this.http.put('https://recipe-book-c6b58.firebaseio.com/recipes.json?auth='+tk, this.recipeservice.getRecipes());
     }
 
     getRecipes() {
-        let tk = this.authservice.haveToken();
+        let tk = this.authservice.USER_TOKEN;
         return this.http.get('https://recipe-book-c6b58.firebaseio.com/recipes.json?auth='+tk)
                     .subscribe((recipes: Response) => {
                         const getrecipes: Recipe[] = recipes.json();  
