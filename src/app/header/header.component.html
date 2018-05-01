@@ -3,20 +3,40 @@
     <div class="navbar-header">
       <a routerLink="/" class="navbar-brand">Recipe Book</a>
     </div>
-
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li routerLinkActive='active'><a  routerLink='/recipes' >Recipes</a></li>
-        <li routerLinkActive='active'><a routerLink='/shoping-list'>Shopping List</a></li>
+        <li routerLinkActive='active'>
+          <a routerLink='/recipes'>Recipes</a>
+        </li>
+        <li routerLinkActive='active'>
+          <a routerLink='/shoping-list'>Shopping List</a>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <div *ngIf="authservice.haveToken() != null else noToken">
+            <li routerLinkActive='active'>
+                <a routerLink='/signup'>Register</a>
+              </li>
+              <li routerLinkActive='active'>
+                <a routerLink='/signin'>Login</a>
+              </li>
+        </div>
+        <ng-template #noToken >
         <li class="dropdown" appDropmenu>
-          <a class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a style="cursor: pointer" (click)="saveData()" >Save Data</a></li>
-            <li><a style="cursor: pointer" (click)="fetchData()" >Fetch Data</a></li>
-          </ul>
-        </li>
+            <a class="dropdown-toggle" role="button">Manage
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a style="cursor: pointer" (click)="saveData()">Save Data</a>
+              </li>
+              <li>
+                <a style="cursor: pointer" (click)="fetchData()">Fetch Data</a>
+              </li>
+            </ul>
+          </li>
+        </ng-template>
+        
       </ul>
     </div>
   </div>

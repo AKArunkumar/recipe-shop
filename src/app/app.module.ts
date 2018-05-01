@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
@@ -22,6 +21,7 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 import { FirebaseService } from './service/firebase.service';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -47,7 +47,7 @@ import { SigninComponent } from './auth/signin/signin.component';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [ShoppingService, RecipeService, FirebaseService],
+  providers: [ShoppingService, RecipeService, FirebaseService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
