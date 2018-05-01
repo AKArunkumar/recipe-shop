@@ -16,6 +16,7 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
 import { NotFoundComponent } from './not-found/not-found.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/recipes', pathMatch: 'full' },
@@ -28,10 +29,10 @@ const appRoutes: Routes = [
     pathMatch: 'full' },
     { path: 'shoping-list', component: ShoppingListComponent },
     { path: 'signup', component: SignupComponent },
+    { path: 'signin', component: SigninComponent },
     { path: 'not-found', component: NotFoundComponent },
     { path: '**', redirectTo: '/not-found'}
 ];
-
 
 @NgModule( {
     imports: [
