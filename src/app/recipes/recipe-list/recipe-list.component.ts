@@ -30,8 +30,8 @@ export class RecipeListComponent implements OnInit, OnDestroy {
    )
    this.route.params.subscribe(
      ( params: Params ) => {
-        this.index = +params['id'];
-        this.editMode = params['id'] != null;
+       this.index = +params['id'];
+       this.editMode = params['id'] != null;
      }
    );
   }
