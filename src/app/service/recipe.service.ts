@@ -27,7 +27,6 @@ export class RecipeService {
         ]
     )
       ];
-
     setRecipes(recipes: Recipe[]) {
         this.recipes = recipes;
         this.recipesGetEvent.next(this.recipes.slice());        

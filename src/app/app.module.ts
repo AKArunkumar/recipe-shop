@@ -16,6 +16,7 @@ import { RecipesModule } from './recipes/recipes.module';
 import { SharedModule } from './shared/shared.module';
 import { ShoppingListModule } from './shopping-list/shoppingList.module';
 import { AuthModule } from './auth/auth.module';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { AuthModule } from './auth/auth.module';
     AppComponent,
     HeaderComponent,
     NotFoundComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
