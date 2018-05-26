@@ -9,9 +9,12 @@ import { DropmenuDirective } from './dropmenu/dropmenu.directive';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
+import { RecipesModule } from './recipes/recipes.module';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [   
-    { path: '', redirectTo: '/recipes', pathMatch: 'full' },         
+    { path: '', component: HomeComponent , pathMatch: 'full' }, 
+    { path: 'recipes', loadChildren: './recipes/recipes-routing.module#RecipesModule'},   
     { path: 'shoping-list', component: ShoppingListComponent },
     { path: 'signup', component: SignupComponent },
     { path: 'signin', component: SigninComponent },
@@ -20,6 +23,7 @@ const appRoutes: Routes = [
 
 @NgModule( {
     imports: [
+        RecipesModule,
         RouterModule.forRoot(appRoutes)
     ],
     exports: [
